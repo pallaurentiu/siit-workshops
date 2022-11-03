@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Room 1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .confirmation-form {
+            background-color: rgba(255, 255, 255, 0.26);
+            width: 700px;
+            padding: 50px 30px 60px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            vertical-align: center;
+            border: 1px solid black; /* just for orientation only (will be deleted) */
+        }
+
+        input[type="text"], input[type="tel"] {
+            padding: 8px 16px;
+        }
+
+        select[name="persons"], select[name="menu-type"] {
+            width: 315px;
+        }
+
+        textarea[type="text"] {
+            width: 640px;
+            resize: vertical;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="background-overlay">
+        <div class="confirmation-form">
+            <h4>Te așteptăm cu drag!</h4>
+            <p>Completeaza formularul de mai jos pentru a ne anunta decizia ta.</p>
+            <form>
+                <input type="text" name="fullname" placeholder="Nume" required></input>
+                <input type="tel" name="phone" placeholder="Telefon" required></input>
+
+                <label for="persons">Câte persoane vor participa?</label>
+                <select name="persons">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <label for="menu-type">Tip meniu</label>
+                <select name="menu-type">
+                    <option value="menu-normal">Normal</option>
+                    <option value="menu-vegetarian">Vegetarian</option>
+                </select>
+
+                <textarea type="text" placeholder="Mesaj pentru miri"></textarea>
+
+                <label for="attendance">Vei fi alături de noi?</label>
+                <input type="radio" name="attendance">Da, voi fi acolo!</input>
+                <input type="radio" name="attendance">Îmi pare rău, nu pot ajunge.</input>
+
+                <input type="submit">Trimite confirmarea</input>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
