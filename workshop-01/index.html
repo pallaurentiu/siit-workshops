@@ -24,16 +24,25 @@
         }
 
         input[type="text"], input[type="tel"] {
+            width: 315px;
             padding: 8px 16px;
+            box-sizing: border-box;
+            margin: 10px 0px;
         }
 
         select[name="persons"], select[name="menu-type"] {
             width: 315px;
+            padding: 8px 16px;
+            box-sizing: border-box;
+            margin: 10px 0px;
         }
 
         textarea[type="text"] {
             width: 640px;
+            padding: 8px 16px;
             resize: vertical;
+            box-sizing: border-box;
+            margin: 10px 0px;
         }
 
     </style>
@@ -47,9 +56,9 @@
             <p>Completeaza formularul de mai jos pentru a ne anunta decizia ta.</p>
             <form>
                 <input type="text" name="fullname" placeholder="Nume" required></input>
-                <input type="tel" name="phone" placeholder="Telefon" required></input>
+                <input type="tel" name="phone" placeholder="Telefon" required></input><br>
 
-                <label for="persons">Câte persoane vor participa?</label>
+                <label for="persons">Câte persoane vor participa?</label><br>
                 <select name="persons">
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -62,7 +71,7 @@
                     <option value="8">8</option>
                     <option value="9">9</option>
                     <option value="10">10</option>
-                </select>
+                </select><br>
 
                 <label for="menu-type">Tip meniu</label>
                 <select name="menu-type">
@@ -70,11 +79,11 @@
                     <option value="menu-vegetarian">Vegetarian</option>
                 </select>
 
-                <textarea type="text" placeholder="Mesaj pentru miri"></textarea>
+                <textarea type="text" placeholder="Mesaj pentru miri"></textarea><br>
 
-                <label for="attendance">Vei fi alături de noi?</label>
-                <input type="radio" name="attendance">Da, voi fi acolo!</input>
-                <input type="radio" name="attendance">Îmi pare rău, nu pot ajunge.</input>
+                <label for="attendance">Vei fi alături de noi?</label><br>
+                <input type="radio" name="attendance">Da, voi fi acolo!</input><br>
+                <input type="radio" name="attendance">Îmi pare rău, nu pot ajunge.</input><br>
 
                 <input type="submit">Trimite confirmarea</input>
             </form>
