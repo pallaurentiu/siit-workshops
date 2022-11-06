@@ -13,16 +13,45 @@
             padding: 0;
         }
 
+        @font-face {
+            font-family: "DM Sans";
+            src: url(typeface/DMSans-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: "Playfair Display Italic";
+            src: url(typeface/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+        }
+
+        @font-face {
+            font-family: "Playball";
+            src: url(typeface/Playball-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: "Alex Brush";
+            src: url(typeface/AlexBrush-Regular.ttf);
+        }
+
+        .confirmation-page {
+            background-image: url(images/home_04_image_03.png);
+            background-repeat: no-repeat;
+            position: fixed;
+            background-size: cover;
+            position: relative;
+            height: 92vh;
+        }
+
         .confirmation-form {
-            background-color: rgba(255, 255, 255, 0.26);
+            background-color: rgba(245, 245, 245, 0.8);
             width: 640px;
             padding: 50px 30px;
-            margin: auto;
+            margin: 50px auto 50px auto;
             display: flex;
             flex-wrap: wrap;
             vertical-align: center;
-            border: 1px solid black;
-            /* just for orientation only (will be deleted) */
+            border: 1px solid;
+            border-radius: 10px;
         }
 
         input[type="text"],
@@ -31,6 +60,11 @@
             padding: 8px 16px;
             box-sizing: border-box;
             margin: 10px 0px;
+            font-size: 18px;
+            font-family: "Playball";
+            border: 1px solid #BCA680;
+            border-radius: 10px;
+            color: #62875C;
         }
 
         select[name="persons"],
@@ -39,65 +73,181 @@
             padding: 8px 16px;
             box-sizing: border-box;
             margin: 10px 0px;
+            font-size: 18px;
+            font-family: "Playball";
+            border: 1px solid #BCA680;
+            border-radius: 10px;
+            color: #62875C;
         }
 
         textarea[type="text"] {
             width: 640px;
+            height: 113px;
+            min-height: 41px;
             padding: 8px 16px;
             resize: vertical;
             box-sizing: border-box;
             margin: 10px 0px;
+            font-family: "Playball";
+            font-size: 18px;
+            border: 1px solid #BCA680;
+            border-radius: 10px;
+            color: #62875C;
         }
 
-        .inlinerow {
+        input[type="radio"] {
+            margin: 0px 10px 0px 5px;
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            outline: 1px solid #BCA680;
+            outline-offset: 2px;
+            border-radius: 1px;
+        }
+
+        input[type="radio"]:checked {
+            background: #BCA680;
+        }
+
+        label {
+            color: #BCA680;
+        }
+
+        .global-typeface {
+            font-family: "Playball";
+            font-size: 18px;
+        }
+
+        .label-select-group {
             display: inline-block;
+        }
+
+        .menu {
+            padding-left: 4px;
+        }
+
+        .labelspace {
+            margin-bottom: 2px;
+        }
+
+        .formhead {
+            width: 700px;
+        }
+
+        .invited {
+            display: inline;
+        }
+
+        .phone {
+            padding-left: 4px;
+        }
+
+        #confirmation-heading {
+            text-align: center;
+            font-family: "Alex Brush";
+            font-weight: 100;
+            font-size: 32px;
+            color: #62875C;
+            padding: 75px 0px;
+            background-color: white;
+        }
+
+        #title {
+            font-family: "DM Sans", sans-serif;
+            font-size: 22px;
+            font-weight: 100;
+            text-transform: uppercase;
+            color: #BCA680;
+            text-align: center;
+        }
+
+        #subtitle {
+            text-align: center;
+            margin: 20px 0px 30px 0px;
+            color: #BCA680;
+        }
+
+        #sendbutton {
+            width: 640px;
+            padding: 5px;
+            margin: 20px 0px 0px 0px;
+            font-family: "Playfair Display Italic";
+            font-size: 22px;
+            border: 0px;
+            border-radius: 10px;
+            background-color: #BCA680;
+            color: white;
+        }
+
+        #sendbutton:hover {
+            cursor: pointer;
+        }
+
+        ::placeholder {
+            color: #62875C;
+            opacity: 0.6;
+        }
+
+        .radiotext {
+            color: #BCA680;
         }
     </style>
 
 </head>
 
 <body>
-    <div class="background-overlay">
-        <div class="confirmation-form">
-            <h4>Te așteptăm cu drag!</h4>
-            <p>Completeaza formularul de mai jos pentru a ne anunta decizia ta.</p>
-            <form>
-                <input type="text" name="fullname" placeholder="Nume" required></input>
-                <input type="tel" name="phone" placeholder="Telefon" required></input><br>
+    <div class="confirmation-page">
+        <h2 id="confirmation-heading">Confirmare</h2>
+        <div class="confirmation-form bg-conf-form">
+            <div class="formhead">
+                <h4 id="title">Te așteptăm cu drag!</h4>
+                <p id="subtitle" class="global-typeface">Completează formularul de mai jos pentru a ne anunța decizia ta.</p>
+            </div>
 
-                <div class="inlinerow">
-                    <label for="persons">Câte persoane vor participa?</label><br>
-                    <select name="persons">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select><br>
-                </div>
+            <div class="global-typeface">
+                <form>
+                    <div class="invited fullname">
+                        <input type="text" name="fullname" placeholder="Nume" required></input>
+                    </div>
 
-                <div class="inlinerow">
-                    <label for="menu-type">Tip meniu</label><br>
-                    <select name="menu-type">
-                        <option value="menu-normal">Normal</option>
-                        <option value="menu-vegetarian">Vegetarian</option>
-                    </select>
-                </div>
+                    <div class="invited phone">
+                        <input type="tel" name="phone" placeholder="Telefon" required></input>
+                    </div>
 
-                <textarea type="text" placeholder="Mesaj pentru miri"></textarea><br>
+                    <div class="label-select-group persons">
+                        <label for="persons" class="labelspace">Câte persoane vor participa?</label><br>
+                        <select name="persons" required>
+                            <option value="0">0</option>
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select><br>
+                    </div>
 
-                <label for="attendance">Vei fi alături de noi?</label><br>
-                <input type="radio" name="attendance">Da, voi fi acolo!</input><br>
-                <input type="radio" name="attendance">Îmi pare rău, nu pot ajunge.</input><br>
+                    <div class="label-select-group menu">
+                        <label for="menu-type" class="labelspace">Tip meniu</label><br>
+                        <select name="menu-type" required>
+                            <option value="menu-normal">Normal</option>
+                            <option value="menu-vegetarian">Vegetarian</option>
+                        </select>
+                    </div>
 
-                <input type="submit">Trimite confirmarea</input>
-            </form>
+                    <textarea type="text" placeholder="Mesaj pentru miri"></textarea><br>
+
+                    <label for="attendance">Vei fi alături de noi?</label><br>
+                    <input type="radio" name="attendance"><span class="radiotext">Da, voi fi acolo!</span></input><br>
+                    <input type="radio" name="attendance"><span class="radiotext">Îmi pare rău, nu pot ajunge.</span></input><br>
+
+                    <input id="sendbutton" type="submit" value="Trimite confirmarea"></input>
+                </form>
+            </div>
         </div>
     </div>
 </body>
