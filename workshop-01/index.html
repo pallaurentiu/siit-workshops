@@ -15,22 +15,26 @@
 
         .confirmation-form {
             background-color: rgba(255, 255, 255, 0.26);
-            width: 700px;
-            padding: 50px 30px 60px 30px;
+            width: 640px;
+            padding: 50px 30px;
+            margin: auto;
             display: flex;
             flex-wrap: wrap;
             vertical-align: center;
-            border: 1px solid black; /* just for orientation only (will be deleted) */
+            border: 1px solid black;
+            /* just for orientation only (will be deleted) */
         }
 
-        input[type="text"], input[type="tel"] {
+        input[type="text"],
+        input[type="tel"] {
             width: 315px;
             padding: 8px 16px;
             box-sizing: border-box;
             margin: 10px 0px;
         }
 
-        select[name="persons"], select[name="menu-type"] {
+        select[name="persons"],
+        select[name="menu-type"] {
             width: 315px;
             padding: 8px 16px;
             box-sizing: border-box;
@@ -45,6 +49,9 @@
             margin: 10px 0px;
         }
 
+        .inlinerow {
+            display: inline-block;
+        }
     </style>
 
 </head>
@@ -58,26 +65,30 @@
                 <input type="text" name="fullname" placeholder="Nume" required></input>
                 <input type="tel" name="phone" placeholder="Telefon" required></input><br>
 
-                <label for="persons">Câte persoane vor participa?</label><br>
-                <select name="persons">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select><br>
+                <div class="inlinerow">
+                    <label for="persons">Câte persoane vor participa?</label><br>
+                    <select name="persons">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select><br>
+                </div>
 
-                <label for="menu-type">Tip meniu</label>
-                <select name="menu-type">
-                    <option value="menu-normal">Normal</option>
-                    <option value="menu-vegetarian">Vegetarian</option>
-                </select>
+                <div class="inlinerow">
+                    <label for="menu-type">Tip meniu</label><br>
+                    <select name="menu-type">
+                        <option value="menu-normal">Normal</option>
+                        <option value="menu-vegetarian">Vegetarian</option>
+                    </select>
+                </div>
 
                 <textarea type="text" placeholder="Mesaj pentru miri"></textarea><br>
 
