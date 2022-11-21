@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+
+    <script>
+        var person1 = {
+            name: "John Doe",
+            gender: "M",
+            height: 1.7,
+            weight: 82,
+        };
+
+        var person2 = {
+            name: "Mary Anne",
+            gender: "F",
+            height: 1.5,
+            weight: 53,
+        };
+
+        var personList = [person1, person2];
+
+        var underWeight = 18.5;
+        var normalWeight = 25;
+        var overWeight = 30;
+
+        for (var i = 0; i < personList.length; i++) {
+            var bmi = (personList[i].weight / (personList[i].height * personList[i].height)).toFixed(2);
+
+            if (bmi < underWeight) {
+                statusWeight = "Underweight";
+            }
+            else if (bmi > underWeight && bmi < normalWeight) {
+                statusWeight = "Normal";
+            }
+            else if (bmi > normalWeight && bmi < overWeight) {
+                statusWeight = "Overweight";
+            }
+            else {
+                statusWeight = "Obese";
+            }
+            
+            console.log(personList[i].name + " | " + personList[i].gender + " | BMI: " + bmi + " | " + statusWeight);
+        };
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
